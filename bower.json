@@ -1,0 +1,31 @@
+{
+  "name": "Calendar",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dumkasoft/calendar",
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone-react-component": "~0.9.0",
+    "bootstrap-material-design": "~0.3.0",
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "requirejs": "~2.1.20",
+    "react": "~0.13.3",
+    "backbone": "~1.2.3"
+  },
+  "devDependencies": {
+    "require-jsx": "https://github.com/seiffert/require-jsx.git"
+  }
+}

@@ -1,32 +1,36 @@
 
 define(["backbone",
 		"react",
-		"jsx!../controllers/LogInController",
-		"jsx!../controllers/RegistrationController"],
+		"jsx!../pages/LogInFormPage",
+		"jsx!../pages/RegistrationFormPage",
+		"jsx!../pages/AdminPage"
+		],
  function(
  	Backbone,
  	React,
- 	LogInController,
- 	RegistrationController
+ 	LogInFormPage,
+ 	RegistrationFormPage,
+ 	AdminPage
  	) {
- 	
+ 	var appHolder = document.getElementById("calendar");
+
 	var Router = Backbone.Router.extend({
 		routes: {
-			"index" : "index",
+			"index"       : "index",
 			"registration": "registration",
+			"adminPage"   : "adminPage",
 
 			index: function() {
-				React.render(<LogInController/>, document.getElementById("calendar"));
+				React.render(<LogInFormPage/>, appHolder);
 			},
 			registration: function() {
-				React.render(<RegistrationController/>, document.getElementById("calendar"));
+				React.render(<RegistrationFormPage/>, appHolder);
+			},
+			adminPage: function() {
+				React.render(<AdminPage/>, appHolder);
 			}
 		}
 	});
-
-	function setPage(component){
-		React.render(<component/>, document.getElementById("calendar"));
-	}
 
 	return Router;
 

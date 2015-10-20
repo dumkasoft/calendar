@@ -56,7 +56,7 @@ define(["react", "JSXTransformer", "jsx!app/Router/Router", "backbone", "jquery"
     window.AppRouter = new Router;
 
     Backbone.history.start();
-    window.AppRouter.navigate("registration",{trigger:true});
+    window.AppRouter.navigate("adminPage",{trigger:true});
 
     $(document).ready(function() {
       $.material.init();
